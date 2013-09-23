@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="myPlatformer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/myPlatformer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="mingw32" />
+					<Add library="SDLmain" />
+					<Add library="SDL_image" />
+					<Add library="SDL_mixer" />
+					<Add library="SDL" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/myPlatformer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../SDL-1.2.15/include" />
+			<Add directory="../SDL_image-1.2.12/include" />
+			<Add directory="../SDL_mixer-1.2.12/include" />
+			<Add directory="../SDL_ttf-2.0.11/include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
+			<Add library="SDL" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add library="SDL_mixer" />
+			<Add library="SDL_image" />
+			<Add library="SDL_ttf" />
+			<Add directory="../SDL-1.2.15/lib" />
+			<Add directory="../SDL_image-1.2.12/lib/x86" />
+			<Add directory="../SDL_mixer-1.2.12/lib/x86" />
+			<Add directory="../SDL_ttf-2.0.11/lib/x86" />
+		</Linker>
+		<Unit filename="GAnimation.cpp" />
+		<Unit filename="GAnimation.h" />
+		<Unit filename="GArea.cpp" />
+		<Unit filename="GArea.h" />
+		<Unit filename="GCamera.cpp" />
+		<Unit filename="GCamera.h" />
+		<Unit filename="GConfig.h" />
+		<Unit filename="GEngine.cpp" />
+		<Unit filename="GEngine.h" />
+		<Unit filename="GEngine_OnCleanup.cpp" />
+		<Unit filename="GEngine_OnEvent.cpp" />
+		<Unit filename="GEngine_OnInit.cpp" />
+		<Unit filename="GEngine_OnLoop.cpp" />
+		<Unit filename="GEngine_OnRender.cpp" />
+		<Unit filename="GEntity.cpp" />
+		<Unit filename="GEntity.h" />
+		<Unit filename="GEntityCollide.cpp" />
+		<Unit filename="GEvent.cpp" />
+		<Unit filename="GEvent.h" />
+		<Unit filename="GFPS.cpp" />
+		<Unit filename="GFPS.h" />
+		<Unit filename="GFontEngine.cpp" />
+		<Unit filename="GFontEngine.h" />
+		<Unit filename="GMap.cpp" />
+		<Unit filename="GMap.h" />
+		<Unit filename="GPlayer.cpp" />
+		<Unit filename="GPlayer.h" />
+		<Unit filename="GSoundBank.cpp" />
+		<Unit filename="GSoundBank.h" />
+		<Unit filename="GState.cpp" />
+		<Unit filename="GState.h" />
+		<Unit filename="GStateManager.cpp" />
+		<Unit filename="GStateManager.h" />
+		<Unit filename="GState_InGame.cpp" />
+		<Unit filename="GState_InGame.h" />
+		<Unit filename="GState_InMenu.cpp" />
+		<Unit filename="GState_InMenu.h" />
+		<Unit filename="GState_InTitle.cpp" />
+		<Unit filename="GState_InTitle.h" />
+		<Unit filename="GSurface.cpp" />
+		<Unit filename="GSurface.h" />
+		<Unit filename="GTile.cpp" />
+		<Unit filename="GTile.h" />
+		<Unit filename="data/audio/bgm/bgmTheme.mid" />
+		<Unit filename="data/audio/sfx/attack.wav" />
+		<Unit filename="data/gfx/#rejects/idle_kaminaX2.bmp" />
+		<Unit filename="data/gfx/#rejects/leMainCharacter.png" />
+		<Unit filename="data/gfx/#rejects/mainCharacter (full).png" />
+		<Unit filename="data/gfx/#rejects/mainCharacter1.png" />
+		<Unit filename="data/gfx/#rejects/mainCharacter2.png" />
+		<Unit filename="data/gfx/#rejects/mainCharacter_min.png" />
+		<Unit filename="data/gfx/#rejects/map_bgX2.bmp" />
+		<Unit filename="data/gfx/#rejects/map_fgX2.bmp" />
+		<Unit filename="data/gfx/#rejects/running_kaminaX2 - Copie.png" />
+		<Unit filename="data/gfx/#rejects/running_kaminaX2.bmp" />
+		<Unit filename="data/gfx/bg/bg001.png" />
+		<Unit filename="data/gfx/bg/bg002.png" />
+		<Unit filename="data/gfx/sprites/mainCharacter.png" />
+		<Unit filename="data/gfx/sprites/mainCharacter.xcf" />
+		<Unit filename="data/gfx/sprites/mainCharacter_.png" />
+		<Unit filename="data/gfx/sprites/mainCharacter__.png" />
+		<Unit filename="data/gfx/sprites/main_character_WIP.psd" />
+		<Unit filename="data/gfx/tilesets/1.png" />
+		<Unit filename="data/maps/1.area" />
+		<Unit filename="data/maps/1.map" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

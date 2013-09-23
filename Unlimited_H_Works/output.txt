@@ -1,0 +1,16 @@
+HWGE Starting...
+HWGE Version: 0.10 BETA
+Date: March 2013
+
+SDL initialized.
+Game Scene initialized.
+Keyboard has been activated.
+HWGE succesfully loaded.
+Done.
+Audio Engine fully loaded. 
+Proceeding to loading SFX and BGM SoundBanks..
+BGM SoundBank set.
+SFX SoundBank set.
+
+Areas and Maps fully loaded. 
+Proceeding to loading GFX..
