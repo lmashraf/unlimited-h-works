@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GAnimation.cpp" />
+    <ClCompile Include="GArea.cpp" />
+    <ClCompile Include="GCamera.cpp" />
+    <ClCompile Include="GEngine.cpp" />
+    <ClCompile Include="GEngine_OnCleanup.cpp" />
+    <ClCompile Include="GEngine_OnEvent.cpp" />
+    <ClCompile Include="GEngine_OnInit.cpp" />
+    <ClCompile Include="GEngine_OnLoop.cpp" />
+    <ClCompile Include="GEngine_OnRender.cpp" />
+    <ClCompile Include="GEntity.cpp" />
+    <ClCompile Include="GEntityCollide.cpp" />
+    <ClCompile Include="GEvent.cpp" />
+    <ClCompile Include="GFontEngine.cpp" />
+    <ClCompile Include="GFPS.cpp" />
+    <ClCompile Include="GMap.cpp" />
+    <ClCompile Include="GPlayer.cpp" />
+    <ClCompile Include="GSoundBank.cpp" />
+    <ClCompile Include="GState.cpp" />
+    <ClCompile Include="GStateManager.cpp" />
+    <ClCompile Include="GState_InGame.cpp" />
+    <ClCompile Include="GState_InMenu.cpp" />
+    <ClCompile Include="GState_InTitle.cpp" />
+    <ClCompile Include="GSurface.cpp" />
+    <ClCompile Include="GTile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GAnimation.h" />
+    <ClInclude Include="GArea.h" />
+    <ClInclude Include="GCamera.h" />
+    <ClInclude Include="GConfig.h" />
+    <ClInclude Include="GEngine.h" />
+    <ClInclude Include="GEntity.h" />
+    <ClInclude Include="GEvent.h" />
+    <ClInclude Include="GFontEngine.h" />
+    <ClInclude Include="GFPS.h" />
+    <ClInclude Include="GMap.h" />
+    <ClInclude Include="GPlayer.h" />
+    <ClInclude Include="GSoundBank.h" />
+    <ClInclude Include="GState.h" />
+    <ClInclude Include="GStateManager.h" />
+    <ClInclude Include="GState_InGame.h" />
+    <ClInclude Include="GState_InMenu.h" />
+    <ClInclude Include="GState_InTitle.h" />
+    <ClInclude Include="GSurface.h" />
+    <ClInclude Include="GTile.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB041423-4D3E-4C6D-993D-4372E5B5D25A}</ProjectGuid>
+    <RootNamespace>UnlimitedHWorks</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\SDL\SDL-1.2.15\include;C:\SDL\SDL_mixer-1.2.12\include;C:\SDL\SDL_image-1.2.12\include;C:\SDL\SDL_ttf-2.0.11\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\SDL\SDL_image-1.2.12\lib\x86;C:\SDL\SDL_mixer-1.2.12\lib\x86;C:\SDL\SDL-1.2.15\lib\x86;C:\SDL\SDL_ttf-2.0.11\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>SDL.lib;SDLmain.lib;SDL_ttf.lib;SDL_image.lib;SDL_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

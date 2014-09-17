@@ -183,8 +183,8 @@ void GEntity::OnMove(float MoveX, float MoveY)
         return;
 
     // Desired Target position
-	double NewX = 0;
-	double NewY = 0;
+	float NewX = 0;
+	float NewY = 0;
 
     // Retrieves the correct movement per second.
 	MoveX *= GFPS::FPSControl.GetSpeedFactor();
@@ -307,7 +307,7 @@ bool GEntity::Jump()
     if(CanJump == false)
         return false;
     else
-        SpeedY =  -(MaxSpeedY * 6.5);
+        SpeedY =  -(MaxSpeedY * 6.5f);
 
     return true;
 }
@@ -322,9 +322,9 @@ bool GEntity::Attack()
 
     // Slightly move forward when attacking.
     if(lastMoveLeft == false)
-        SpeedX = (MaxSpeedX * 0.4);
+        SpeedX = (MaxSpeedX * 0.4f);
     else
-        SpeedX = - (MaxSpeedX * 0.4);
+        SpeedX = - (MaxSpeedX * 0.4f);
 
     return true;
 }

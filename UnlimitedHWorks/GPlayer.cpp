@@ -149,8 +149,8 @@ void GPlayer::OnMove(float MoveX, float MoveY)
         return;
 
     // Desired Target position
-	double NewX = 0;
-	double NewY = 0;
+	float NewX = 0;
+	float NewY = 0;
 
     // Retrieves the correct movement per second.
 	MoveX *= GFPS::FPSControl.GetSpeedFactor();

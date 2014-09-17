@@ -14,11 +14,6 @@ bool GEngine::OnInit()
 
      freopen( "output.txt", "w", stdout );
 
-     cout <<"HWGE Starting..."
-          <<endl<<"HWGE Version: 0.10 BETA"
-          <<endl<<"Date: March 2013"
-          <<endl<<endl;
-
     // Initialize SDL settings
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
     { return false; }
@@ -34,10 +29,8 @@ bool GEngine::OnInit()
 
     cout <<"Game Scene initialized."<<endl;
 
-        // A remedy for the Keyboard button mashing afficionado.
+		// A remedy for the Keyboard button mashing afficionado.
         SDL_EnableKeyRepeat(1, SDL_DEFAULT_REPEAT_INTERVAL / 3);
-
-        cout <<"Keyboard has been activated."<<endl;
 
     // Load Game State: INTRO
     GStateManager::SetActiveAppState(APPSTATE_INTRO);

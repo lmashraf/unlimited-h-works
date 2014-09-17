@@ -13,7 +13,9 @@
 #ifndef _GEngine_H_
     #define _GEngine_H_
 
+// SDL
 #include <SDL.h>
+
 // Logging
 #include <iostream>
 #include <cstdio>

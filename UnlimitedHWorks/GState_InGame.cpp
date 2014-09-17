@@ -115,36 +115,34 @@ void GState_InGame::OnActivate()
     if(Mix_OpenAudio(AUDIO_S16, MIX_DEFAULT_FORMAT, 2, 4096) < 0)
         return;
 
-    cout <<"Audio Engine fully loaded. "<<endl<<"Proceeding to loading SFX and BGM SoundBanks.."<<endl;
-
         // BGM (PS: -1 loops the music).
         Mix_Music *music = Mix_LoadMUS("./data/audio/bgm/bgmTheme.mid");
         Mix_PlayMusic(music, -1);
 
-        cout <<"BGM SoundBank set."<<endl;
-
         // SFX
         if((SFX_Attack = GSoundBank::SoundControl.OnLoad("./data/audio/sfx/attack.wav")) == -1)
-            return;
-
-        cout <<"SFX SoundBank set."<<endl<<endl;
+            return;      
 
     // Activate GFX settings
     if(GArea::AreaControl.OnLoad("./data/maps/1.area") == false)
         return;
 
-    cout <<"Areas and Maps fully loaded. "<<endl<<"Proceeding to loading GFX.."<<endl;
 
-    if((bgSurface  = GSurface::OnLoad("./data/gfx/bg/myMap.png")) == NULL)
+    if((bgSurface  = GSurface::OnLoad("./data/gfx/bg/bg_mymap.png")) == NULL)
         return;
-    if((mapSurface = GSurface::OnLoad("./data/gfx/bg/bg001.png")) == NULL)
-       return;
 
-    cout <<"GFX Backgrounds set."<<endl;
+/*    if((mapSurface = GSurface::OnLoad("./data/gfx/bg/bg001.png")) == NULL)
+	{
+		cout <<"Failure to load ./data/gfx/bg/bg001.png"<<endl<<endl;
+       return;
+	}*/
 
     // Activate Entity objects.
     if(Player.OnLoad("./data/gfx/sprites/mainCharacter__.png", 180, 180, 8) == false)
+	{
+		cout <<"Failure to load ./data/gfx/sprites/mainCharacter__.png"<<endl<<endl;
         return;
+	}
 
     cout <<"Game Sprites set."<<endl;
 

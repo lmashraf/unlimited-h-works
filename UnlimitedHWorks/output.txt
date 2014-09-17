@@ -1,0 +1,7 @@
+SDL initialized.
+Game Scene initialized.
+HWGE succesfully loaded.
+Done.
+Game Sprites set.
+MC coordinates set.
+Camera set.

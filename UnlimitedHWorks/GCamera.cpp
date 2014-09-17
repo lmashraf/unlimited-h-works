@@ -45,10 +45,10 @@ int GCamera::GetX()
                 return (MAP_WIDTH * TILE_SIZE) - WWIDTH;
             // LOCK Camera to follow target
             else
-                return *TargetX - (WWIDTH / 2);
+                return static_cast<int> (*TargetX - (WWIDTH / 2));
 		}
 
-		return *TargetX;
+		return static_cast<int> (*TargetX);
 	}
 
     // Returns the Target's X coordinate as the Camera's X coordinate
@@ -64,11 +64,11 @@ int GCamera::GetY()
         // For MODE CENTER we take half the screen's HEIGHT and substract it from the Target's coordinates.
 		if(TargetMode == TARGET_MODE_CENTER)
 		{
-                return *TargetY - (WHEIGHT * 0.4);
+                return static_cast<int> (*TargetY - (WHEIGHT * 0.4));
 		}
 
         // Returns the Target's Y coordinate as the Camera's Y coordinate
-		return *TargetY;
+		return static_cast<int> (*TargetY);
 	}
 
 	return Y;
